@@ -13,4 +13,9 @@ class Clients extends ChangeNotifier {
     notifyListeners(); // Essa linha notifica aoss widgets que a mudança
     // ocorreu, é como se fosse um setState({})
   }
+
+  void remove(int index) {
+    clients.removeAt(index);
+    notifyListeners();
+  }
 }
