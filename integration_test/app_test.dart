@@ -13,7 +13,7 @@ void main() {
   testWidgets('Integration Test', (tester) async {
     final providerKey = GlobalKey();
 
-    app.main([], providerKey);
+    app.main(list: [], providerKey: providerKey);
     await tester.pumpAndSettle();
     // Testando tela inicial
     expect(find.text('Clientes'), findsOneWidget);
